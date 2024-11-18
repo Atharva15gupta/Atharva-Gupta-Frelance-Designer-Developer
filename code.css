@@ -1,0 +1,239 @@
+@font-face {
+    font-family: light;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
+@font-face {
+    font-family: thin;
+    src: url(./NeueHaasDisplayThin.ttf);
+}
+@font-face {
+    font-family: xxthin;
+    src: url(./NeueHaasDisplayXXThin.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --base_color:#EFEAE3;
+    --text_color: black;
+    --hover_color: red;
+}
+
+.darkmode{
+    --base_color:black;
+    --text_color: #EFEAE3;
+}
+
+#main{
+    position: relative;
+    z-index: 10;
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: var(--text_color);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    transition: ease 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: wait;
+}
+
+#loader h1{
+    font-size: 3.5vw;
+    color: var(--base_color);
+    position:absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 0.3s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    /* font-family: "Neue Haas Grotesk Display Pro"; */
+    font-family: thin;
+}
+
+
+#loader h1:nth-child(2){
+    animation-delay: 0.3s;
+}
+
+#loader h1:nth-child(3){
+    animation-delay: 0.6s;
+}
+
+#loader h1:nth-child(4){
+    animation-delay: 0.9s;
+}
+
+#loader h1:nth-child(5){
+    animation-delay: 1.2s;
+}
+
+@keyframes load{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--base_color);
+    position: relative;
+    /* padding: 4vh 4vh; */
+    
+}
+
+#nav{
+    /* background-color: red; */
+    display: flex;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-style: normal;
+    font-size: 14px;
+    justify-content: space-between;
+    padding: 4vh 4vh;
+}
+
+#left_nav{
+    display: flex;
+    gap: 5px;
+}
+
+#left_nav a{
+    color: var(--text_color);
+    text-decoration: none;
+}
+
+#left_nav h2:hover{
+    color: red;
+}
+
+#right_nav{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+}
+
+#theme_switch{
+    color: var(--text_color);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+#theme_switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme_switch svg:last-child{
+    display: none;
+}
+
+.darkmode #theme_switch svg:first-child{
+    display: block;
+}
+
+#theme_switch svg{
+    fill: var(--text_color);
+}
+
+#theme_switch svg:hover{
+    transition: 0.2s;
+    fill: var(--hover_color );
+}
+
+
+#right_nav a{
+    color: var(--text_color);
+    text-decoration: none;
+}
+
+#right_nav h2:hover{
+    transition: 0.2s;
+    color: red;
+}
+
+#center{
+    width: 100%;
+    height: 55vh;
+    font-family: "Neue Haas Grotesk Display Pro";
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10vh 10vh;
+}
+
+#center_right{
+    font-size: 20px;
+    color: var(--text_color);
+    cursor: default;
+    padding: 0vh 4vh;
+}
+
+#arrow{
+    line-height: 20vh;
+}
+
+#bottom{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: thin;
+    cursor: default ;
+    color: var(--text_color);
+}
+#moving_text{
+    white-space: nowrap;
+    overflow: auto;
+}
+#moving_text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+#moving_text h1{
+    font-size: 30vh;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0vw 2vw;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(-100%);
+     }
+    to{
+        transform: translateX(0);
+     }    
+}
