@@ -10,6 +10,15 @@
     font-family: xxthin;
     src: url(./NeueHaasDisplayXXThin.ttf);
 }
+@font-face {
+    font-family: italic;
+    src: url(./NeueHaasDisplayBlackItalic.ttf);
+}
+
+@font-face {
+    font-family: lightitalic;
+    src: url(./NeueHaasDisplayLightItalic.ttf);
+}
 
 *{
     margin: 0;
@@ -22,14 +31,24 @@ html , body{
 }
 
 :root{
-    --base_color:#EFEAE3;
-    --text_color: black;
-    --hover_color: red;
+    --base_color:#F6F8E0;
+    --text_color: #191514;
+    --hover_color: #EE3D2B;
+    --hero_color1: orange;
+    --hero_color2: #DA0037;
+    --hero_color3: orangered;
+    /* --border_color: #19151446; */
+    --moving_text:
+
 }
 
 .darkmode{
-    --base_color:black;
-    --text_color: #EFEAE3;
+    --base_color:#191514;
+    --text_color: #F6F8E0;
+    --hero_color1: #FF9BD2;
+    --hero_color2: #da00c4;
+    --hero_color3: #D91656;
+    /* --border_color: #f6f8e06c; */
 }
 
 #main{
@@ -101,8 +120,7 @@ html , body{
     width: 100%;
     background-color: var(--base_color);
     position: relative;
-    /* padding: 4vh 4vh; */
-    
+   
 }
 
 #nav{
@@ -126,7 +144,7 @@ html , body{
 }
 
 #left_nav h2:hover{
-    color: red;
+    color: var(--hover_color);
 }
 
 #right_nav{
@@ -174,7 +192,7 @@ html , body{
 
 #right_nav h2:hover{
     transition: 0.2s;
-    color: red;
+    color: var(--hover_color);
 }
 
 #center{
@@ -198,18 +216,25 @@ html , body{
     line-height: 20vh;
 }
 
+.highlight_designer{
+    font-family: "Ink Free";
+    /* color: var(--hover_color); */
+}
+
 #bottom{
-    min-height: 100vh;
+    min-height: 30vh;
     width: 100%;
     position: relative;
     font-family: thin;
     cursor: default ;
     color: var(--text_color);
 }
+
 #moving_text{
     white-space: nowrap;
     overflow: auto;
 }
+
 #moving_text::-webkit-scrollbar{
     display: none;
 }
@@ -237,3 +262,433 @@ html , body{
         transform: translateX(0);
      }    
 }
+
+#page2{
+    width: 100%;
+    min-height: 100vh;
+    /* height: 90vh; */
+    background-color: var(--base_color);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--border_color);
+}
+
+#page2_center h1{
+    font-family: "Neue Haas Grotesk Display Pro" ;
+    /* font-family: "Edwardian Script ITC" ; */
+    font-size: 5vw;
+    color: var(--text_color);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    line-height: 5vw;
+    padding: 5vw  12vw;
+    z-index: 50;
+}
+
+#page2_bottom2{
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 1.3vw;
+    color: var(--text_color);
+    height: 5vw;
+    width: 40vw;
+    margin: 6vw 63vw;
+    /* background-color: red; */
+}
+
+/* #page2_bottom2 img{
+    height: auto;
+    width: 20%;
+    margin: 20px 0;
+} */
+
+.highlight_designer2{
+    /* font-family: "Edwardian Script ITC" ; */
+    font-family: "Ink Free" ;
+}
+
+#hero1{
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(40px);
+    /* filter: ; */
+    position: absolute;
+    background: var(--hero_color1);
+    animation-name: anime1;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    top: 25%;
+    left: 35%;
+    display: flex;
+    z-index: 80;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(-10%,10%);
+    }
+    to{
+        transform: translate(10%,-10%);
+    }
+} 
+
+#hero2{
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(40px);
+    position: absolute;
+    background: var(--hero_color2);
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    top: 25%;
+    left: 35%;
+    display: flex;
+    z-index: 80;
+}
+
+
+@keyframes anime2 {
+    from{
+        transform: translate(10%,-10%);
+    }
+    to{
+        transform: translate(10%,10%);
+    }
+} 
+
+#hero3{
+    min-height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(40px);
+    position: absolute;
+    background:  var(--hero_color3);
+    animation-name: anime3;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    top: 25%;
+    left: 35%;
+    display: flex;
+    z-index: 80;
+}
+
+@keyframes anime3 {
+    from{
+        transform: translate(10%,10%);
+    }
+    to{
+        transform: translate(-10%,-10%);
+    }
+} 
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--base_color);
+    padding: 4vw 0;
+    /* background-color: red; */
+}
+#moving_text2{
+    white-space: nowrap;
+    overflow: auto;
+    /* font-family: "Neue Haas Grotesk Display Pro"; */
+    font-family: "Ink Free";
+    /* font-family: lightitalic; */
+    padding-bottom:  6vh;
+    color: #2D61D1;
+    /* background-color: red; */
+}
+#moving_text2::-webkit-scrollbar{
+    display: none;
+}
+.con2{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: float;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving_text2 h1{
+    font-size: 8vw;
+    display: inline-block;
+    cursor: default;
+}
+#gola{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: #FE370D; */
+    background-color: var(--text_color);
+    display: inline-block;
+    margin: 1vw 1vw;
+}
+@keyframes float {
+    from{
+        transform: translateX(0);
+     }
+    to{
+        transform: translateX(-100%);
+     }    
+}
+
+/* #moving_text2{
+    white-space: nowrap;
+    overflow: auto;
+    padding:  2vw 0;
+}
+
+#moving_text2::-webkit-scrollbar{
+    display: none;
+}
+.con2{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+#moving_text2 h1{
+    font-family: light;
+    color: red;
+    font-size: 10vh;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0vw 1vw;
+}
+
+
+@keyframes move2 {
+    from{
+        transform: translateX(0);
+     }
+    to{
+        transform: translateX(-100%);
+     }    
+} */
+
+.elem{
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    display: flex;
+    padding: 0 4vw;
+    cursor: pointer;
+    border-bottom: 2px solid var(--border_color);
+}
+
+.elem h2{
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 7vw;
+    color: var(--text_color);
+    position: relative;
+    padding: 3vw ;
+    z-index: 9;
+}
+
+.elem h2:hover{
+    color: #2D61D1;
+}
+
+.elem .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: var(--hover_color);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: ease 0.2s;
+    z-index: 7;
+}
+.elem:hover .overlay{
+    top: 0;
+} 
+
+#fixed_image{
+    height: 18vw;
+    width: 32vw;
+    border: 5px solid var(--text_color);
+    background-color: yellow;
+    border-radius: 20px;
+    position:fixed;
+    z-index: 99;
+    left: 63%;
+    top: 35%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#page4{
+    min-height: 70vh;
+    width: 100%;
+    background-color: var(--base_color);
+    /* box-shadow: 0 20px 20px var(--base_color); */
+    z-index: 9;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
+    padding: 8vh 0;
+}
+
+.swiper {
+    width: 100vw;
+    height: 20vw;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: transparent;
+}
+
+#footer{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--text_color);
+    z-index: 8;
+    display: flex;
+    bottom: 0;
+    display: absolute;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+}
+
+#footer-div {
+    height: 50vh;
+    width: 160vh;
+    /* background-color: red; */
+}
+
+#footer-div h1{
+    font-family:"Neue Haas Grotesk Display Pro";
+    color: var(--base_color);
+    font-size: 7vw;
+    line-height: 90px;
+    position: relative;
+    padding: 0 100px;
+    left: 100px;
+    /* background-color: red; */
+} 
+
+#footer_buttons{
+    position: relative;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    left: 200px;
+    top: 60px;   
+    width: 80vh;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+#footer-div h4{
+    border: 2px solid var(--base_color);
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+#footer-div a{
+    color: var(--base_color);
+    text-decoration: none;
+}
+
+#footer-bottom{
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 1.5vw;
+    position: relative;
+    width: 100vw;
+    height: 5vh;
+    /* background-color: red; */
+    margin-top: 150px;
+    margin-bottom: 50px;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-bottom-right{
+    width: 25vw;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer-bottom-right h4{
+    border: 2px solid var(--base_color);
+    border-radius: 50px;
+    padding: 5px 10px;
+    justify-content: space-between;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+/* #footer-bottom-right h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    left: 0;
+    bottom: -100%;
+}
+
+#footer-bottom-right h4:hover::after{
+    bottom: 0;
+} */
+
+#footer-bottom-right h4:hover{
+    color: blue;
+}
+
+
+#footer-bottom-right a{
+    color: var(--base_color);
+    text-decoration: none;
+}
+
+#footer-bottom-left {
+    color: var(--base_color);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+}
+

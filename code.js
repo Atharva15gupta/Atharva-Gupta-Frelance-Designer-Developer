@@ -1,3 +1,8 @@
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('#main'),
+  smooth: true
+});
+
 function magneticButton(element) {
   const children = element.children[0];
 
@@ -69,4 +74,56 @@ if (themeSwitch) {
   console.error("themeSwitch element not found.");
 }
 
+// function page3Animation(){
+//   var elemC = document.querySelector("#elem_container")
+//   var fixed = document.querySelector("#fixed_image")
+//   elemC.addEventListener("mouseenter",function(){
+//       fixed.style.display = "block"
+//   })
+//   elemC.addEventListener("mouseleave",function(){
+//       fixed.style.display = "none"
+//   })
+//   var elems = document.querySelectorAll(".elem")
+//   elems.forEach(function(e){
+//       e.addEventListener("mouseenter",function(){
+//           var image = e.getAttribute("data-image")
+//           fixed.style.backgroundImage = `url(${image})`
+//       })
+//   })
+// }
 
+function page3Animation() {
+  var elemC = document.querySelector("#elem_container");
+  var fixed = document.querySelector("#fixed_image");
+
+  // Show the fixed image on mouseenter
+  elemC.addEventListener("mouseenter", function () {
+    fixed.style.display = "block";
+  });
+
+  // Hide the fixed image on mouseleave
+  elemC.addEventListener("mouseleave", function () {
+    fixed.style.display = "none";
+  });
+
+  // Handle hover over individual elements
+  var elems = document.querySelectorAll(".elem");
+  elems.forEach(function (e) {
+    e.addEventListener("mouseenter", function () {
+      var image = e.getAttribute("data-image"); // Get the relative path to the image
+      fixed.style.backgroundImage = `url(./images/${image})`; // Update to point to your folder
+    });
+  });
+}
+
+
+page3Animation()
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  centeredSlides: true,
+  pagination: {
+    clickable: true,
+  },
+});
