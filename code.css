@@ -116,7 +116,7 @@ html , body{
 }
 
 #page1{
-    min-height: 100vh;
+    min-height: 120vh;
     width: 100%;
     background-color: var(--base_color);
     position: relative;
@@ -265,7 +265,7 @@ html , body{
 
 #page2{
     width: 100%;
-    min-height: 100vh;
+    min-height: 120vh;
     /* height: 90vh; */
     background-color: var(--base_color);
     position: relative;
@@ -392,10 +392,10 @@ html , body{
 } 
 
 #page3{
-    min-height: 100vh;
+    min-height: 120vh;
     width: 100%;
     background-color: var(--base_color);
-    padding: 4vw 0;
+    /* padding: 4vw 0; */
     /* background-color: red; */
 }
 #moving_text2{
@@ -404,7 +404,7 @@ html , body{
     /* font-family: "Neue Haas Grotesk Display Pro"; */
     font-family: "Ink Free";
     /* font-family: lightitalic; */
-    padding-bottom:  6vh;
+    padding-bottom:  8vh;
     color: #2D61D1;
     /* background-color: red; */
 }
@@ -534,7 +534,7 @@ html , body{
 }
 
 #page4{
-    min-height: 70vh;
+    height: 70vh;
     width: 100%;
     background-color: var(--base_color);
     /* box-shadow: 0 20px 20px var(--base_color); */
@@ -542,7 +542,23 @@ html , body{
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     overflow: hidden;
-    padding: 8vh 0;
+    /* padding: 20vh 0; */
+    position: absolute;
+}
+
+#page4_text{
+    font-family: light;
+    color: var(--text_color);
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 5vh 10vh ;
+    /* background-color: red; */
+}
+
+.custom{
+    color: #EE3D2B;
 }
 
 .swiper {
@@ -555,7 +571,7 @@ html , body{
     font-size: 18px;
     background: #fff;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
   }
 
@@ -567,9 +583,10 @@ html , body{
   }
 
 #page5{
-    min-height: 100vh;
+    min-height: 163vh;
     width: 100%;
     background-color: transparent;
+    /* z-index: 9; */
 }
 
 #footer{
@@ -584,7 +601,6 @@ html , body{
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-    
 }
 
 #footer-div {
