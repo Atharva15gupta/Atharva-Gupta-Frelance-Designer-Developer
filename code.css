@@ -37,7 +37,7 @@ html , body{
     --hero_color1: orange;
     --hero_color2: #DA0037;
     --hero_color3: orangered;
-    /* --border_color: #19151446; */
+    --border_color: #19151446;
     --moving_text:
 
 }
@@ -48,7 +48,7 @@ html , body{
     --hero_color1: #FF9BD2;
     --hero_color2: #da00c4;
     --hero_color3: #D91656;
-    /* --border_color: #f6f8e06c; */
+    --border_color: #f6f8e06c;
 }
 
 #main{
@@ -63,7 +63,7 @@ html , body{
     z-index: 999;
     position: fixed;
     top: 0;
-    transition: ease 1s;
+    transition: ease 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +76,7 @@ html , body{
     position:absolute;
     opacity: 0;
     animation-name: load;
-    animation-duration: 0.3s;
+    animation-duration: 0.4s;
     animation-delay: 0s;
     animation-timing-function: linear;
     /* font-family: "Neue Haas Grotesk Display Pro"; */
@@ -85,19 +85,19 @@ html , body{
 
 
 #loader h1:nth-child(2){
-    animation-delay: 0.3s;
+    animation-delay: 0.4s;
 }
 
 #loader h1:nth-child(3){
-    animation-delay: 0.6s;
+    animation-delay: 0.8s;
 }
 
 #loader h1:nth-child(4){
-    animation-delay: 0.9s;
+    animation-delay: 1.2s;
 }
 
 #loader h1:nth-child(5){
-    animation-delay: 1.2s;
+    animation-delay: 1.6s;
 }
 
 @keyframes load{
@@ -116,7 +116,7 @@ html , body{
 }
 
 #page1{
-    min-height: 120vh;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--base_color);
     position: relative;
@@ -265,13 +265,13 @@ html , body{
 
 #page2{
     width: 100%;
-    min-height: 120vh;
+    min-height: 100vh;
     /* height: 90vh; */
     background-color: var(--base_color);
     position: relative;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid var(--border_color);
+    /* border-bottom: 2px solid var(--border_color); */
 }
 
 #page2_center h1{
@@ -392,7 +392,7 @@ html , body{
 } 
 
 #page3{
-    min-height: 120vh;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--base_color);
     /* padding: 4vw 0; */
@@ -405,7 +405,7 @@ html , body{
     font-family: "Ink Free";
     /* font-family: lightitalic; */
     padding-bottom:  8vh;
-    color: #2D61D1;
+    color: var(--text_color);
     /* background-color: red; */
 }
 #moving_text2::-webkit-scrollbar{
@@ -429,7 +429,7 @@ html , body{
     width: 40px;
     border-radius: 50%;
     /* background-color: #FE370D; */
-    background-color: var(--text_color);
+    background-color: var(--hover_color);
     display: inline-block;
     margin: 1vw 1vw;
 }
@@ -488,7 +488,7 @@ html , body{
     display: flex;
     padding: 0 4vw;
     cursor: pointer;
-    border-bottom: 2px solid var(--border_color);
+    /* border-bottom: 2px solid var(--border_color); */
 }
 
 .elem h2{
@@ -501,13 +501,14 @@ html , body{
 }
 
 .elem h2:hover{
-    color: #2D61D1;
+    /* color: #2D61D1; */
+    color: var(--base_color);
 }
 
 .elem .overlay {
     height: 100%;
     width: 100%;
-    background-color: var(--hover_color);
+    background-color: var(--text_color);
     position: absolute;
     left: 0;
     top: -100%;
@@ -534,7 +535,7 @@ html , body{
 }
 
 #page4{
-    height: 70vh;
+    min-height: 70vh;
     width: 100%;
     background-color: var(--base_color);
     /* box-shadow: 0 20px 20px var(--base_color); */
@@ -544,6 +545,7 @@ html , body{
     overflow: hidden;
     /* padding: 20vh 0; */
     position: absolute;
+    cursor: default;
 }
 
 #page4_text{
@@ -583,15 +585,14 @@ html , body{
   }
 
 #page5{
-    min-height: 163vh;
+    min-height: 160vh;
     width: 100%;
-    background-color: transparent;
-    /* z-index: 9; */
+    /* background-color: red; */
 }
 
 #footer{
     position: absolute;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--text_color);
     z-index: 8;
@@ -611,12 +612,13 @@ html , body{
 
 #footer-div h1{
     font-family:"Neue Haas Grotesk Display Pro";
-    color: var(--base_color);
+    color: var(--base_color); 
     font-size: 7vw;
     line-height: 90px;
     position: relative;
     padding: 0 100px;
     left: 100px;
+    cursor: default;
     /* background-color: red; */
 } 
 
@@ -631,6 +633,42 @@ html , body{
     width: 80vh;
     justify-content: space-between;
     /* background-color: red; */
+}
+
+#footer_buttons h4{
+    border: 1.5px  solid rgba(0, 0, 0, 0.297);
+    color: black;
+    transition: all ease 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+#footer_buttons h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--base_color);
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+#footer_buttons h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#footer_buttons h4 a{
+    color: var(--base_color);
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+#footer_buttons h4:hover a{
+    color: var(--text_color);
 }
 
 #footer-div h4{
@@ -672,27 +710,34 @@ html , body{
     padding: 5px 10px;
     justify-content: space-between;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
-/* #footer-bottom-right h4::after{
+#footer-bottom-right h4::after{
     content: "";
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: red;
+    background-color: var(--base_color);
     left: 0;
     bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
 }
 
 #footer-bottom-right h4:hover::after{
     bottom: 0;
-} */
-
-#footer-bottom-right h4:hover{
-    color: blue;
+    border-radius: 0;
 }
-
+#footer-bottom-right h4 a{
+    color: var(--base_color);
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+#footer-bottom-right h4:hover a{
+    color: var(--text_color);
+}
 
 #footer-bottom-right a{
     color: var(--base_color);
