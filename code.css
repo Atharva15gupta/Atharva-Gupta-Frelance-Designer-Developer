@@ -502,13 +502,13 @@ html , body{
 
 .elem h2:hover{
     /* color: #2D61D1; */
-    color: var(--base_color);
+    color: var(--text_color);
 }
 
 .elem .overlay {
     height: 100%;
     width: 100%;
-    background-color: var(--text_color);
+    background-color: var(--hover_color);
     position: absolute;
     left: 0;
     top: -100%;
