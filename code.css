@@ -38,8 +38,6 @@ html , body{
     --hero_color2: #DA0037;
     --hero_color3: orangered;
     --border_color: #19151446;
-    --moving_text:
-
 }
 
 .darkmode{
@@ -79,7 +77,6 @@ html , body{
     animation-duration: 0.4s;
     animation-delay: 0s;
     animation-timing-function: linear;
-    /* font-family: "Neue Haas Grotesk Display Pro"; */
     font-family: thin;
 }
 
@@ -124,7 +121,6 @@ html , body{
 }
 
 #nav{
-    /* background-color: red; */
     display: flex;
     font-family: "Neue Haas Grotesk Display Pro";
     font-style: normal;
@@ -218,7 +214,6 @@ html , body{
 
 .highlight_designer{
     font-family: "Ink Free";
-    /* color: var(--hover_color); */
 }
 
 #bottom{
@@ -271,12 +266,10 @@ html , body{
     position: relative;
     align-items: center;
     justify-content: center;
-    /* border-bottom: 2px solid var(--border_color); */
 }
 
 #page2_center h1{
     font-family: "Neue Haas Grotesk Display Pro" ;
-    /* font-family: "Edwardian Script ITC" ; */
     font-size: 5vw;
     color: var(--text_color);
     align-items: center;
@@ -294,17 +287,9 @@ html , body{
     height: 5vw;
     width: 40vw;
     margin: 6vw 63vw;
-    /* background-color: red; */
 }
 
-/* #page2_bottom2 img{
-    height: auto;
-    width: 20%;
-    margin: 20px 0;
-} */
-
 .highlight_designer2{
-    /* font-family: "Edwardian Script ITC" ; */
     font-family: "Ink Free" ;
 }
 
@@ -395,18 +380,13 @@ html , body{
     min-height: 100vh;
     width: 100%;
     background-color: var(--base_color);
-    /* padding: 4vw 0; */
-    /* background-color: red; */
 }
 #moving_text2{
     white-space: nowrap;
     overflow: auto;
-    /* font-family: "Neue Haas Grotesk Display Pro"; */
     font-family: "Ink Free";
-    /* font-family: lightitalic; */
     padding-bottom:  8vh;
     color: var(--text_color);
-    /* background-color: red; */
 }
 #moving_text2::-webkit-scrollbar{
     display: none;
@@ -428,7 +408,6 @@ html , body{
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    /* background-color: #FE370D; */
     background-color: var(--hover_color);
     display: inline-block;
     margin: 1vw 1vw;
@@ -442,43 +421,6 @@ html , body{
      }    
 }
 
-/* #moving_text2{
-    white-space: nowrap;
-    overflow: auto;
-    padding:  2vw 0;
-}
-
-#moving_text2::-webkit-scrollbar{
-    display: none;
-}
-.con2{
-    white-space: nowrap;
-    display: inline-block;
-    animation-name: move2;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    
-}
-#moving_text2 h1{
-    font-family: light;
-    color: red;
-    font-size: 10vh;
-    display: inline-block;
-    white-space: nowrap;
-    margin: 0vw 1vw;
-}
-
-
-@keyframes move2 {
-    from{
-        transform: translateX(0);
-     }
-    to{
-        transform: translateX(-100%);
-     }    
-} */
-
 .elem{
     height: 150px;
     width: 100%;
@@ -488,7 +430,6 @@ html , body{
     display: flex;
     padding: 0 4vw;
     cursor: pointer;
-    /* border-bottom: 2px solid var(--border_color); */
 }
 
 .elem h2{
@@ -501,7 +442,6 @@ html , body{
 }
 
 .elem h2:hover{
-    /* color: #2D61D1; */
     color: var(--text_color);
 }
 
@@ -538,12 +478,10 @@ html , body{
     min-height: 70vh;
     width: 100%;
     background-color: var(--base_color);
-    /* box-shadow: 0 20px 20px var(--base_color); */
     z-index: 9;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     overflow: hidden;
-    /* padding: 20vh 0; */
     position: absolute;
     cursor: default;
 }
@@ -556,7 +494,6 @@ html , body{
     justify-content: center;
     position: relative;
     padding: 5vh 10vh ;
-    /* background-color: red; */
 }
 
 .custom{
@@ -573,7 +510,6 @@ html , body{
     font-size: 18px;
     background: #fff;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
   }
 
@@ -587,7 +523,6 @@ html , body{
 #page5{
     min-height: 160vh;
     width: 100%;
-    /* background-color: red; */
 }
 
 #footer{
@@ -607,7 +542,6 @@ html , body{
 #footer-div {
     height: 50vh;
     width: 160vh;
-    /* background-color: red; */
 }
 
 #footer-div h1{
@@ -619,7 +553,6 @@ html , body{
     padding: 0 100px;
     left: 100px;
     cursor: default;
-    /* background-color: red; */
 } 
 
 #footer_buttons{
@@ -632,7 +565,6 @@ html , body{
     top: 60px;   
     width: 80vh;
     justify-content: space-between;
-    /* background-color: red; */
 }
 
 #footer_buttons h4{
@@ -688,7 +620,6 @@ html , body{
     position: relative;
     width: 100vw;
     height: 5vh;
-    /* background-color: red; */
     margin-top: 150px;
     margin-bottom: 50px;
     padding: 0 5vw;
@@ -753,3 +684,8 @@ html , body{
 
 }
 
+@media (max-witdth:600px) {
+
+    
+    
+}

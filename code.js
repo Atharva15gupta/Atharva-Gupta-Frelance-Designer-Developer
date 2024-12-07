@@ -38,7 +38,6 @@ function magneticButton(element) {
   });
 }
 
-// Select all <a> elements and apply the magneticButton function to each
 const buttons = document.querySelectorAll('.magnetic-btn');
 buttons.forEach((button) => magneticButton(button));
 
@@ -49,7 +48,7 @@ setTimeout(function(){
 
 
 let darkmode = localStorage.getItem('darkmode');
-const themeSwitch = document.querySelector('#theme_switch'); // Use a valid selector
+const themeSwitch = document.querySelector('#theme_switch'); 
 
 const enableDarkmode = () => {
   document.body.classList.add('darkmode');
@@ -57,14 +56,12 @@ const enableDarkmode = () => {
 };
 
 const disableDarkmode = () => {
-  document.body.classList.remove('darkmode'); // Corrected to remove the class
+  document.body.classList.remove('darkmode'); 
   localStorage.setItem('darkmode', 'null');
 };
 
-// Initialize theme on page load
 if (darkmode === "active") enableDarkmode();
 
-// Check if themeSwitch exists before adding event listener
 if (themeSwitch) {
   themeSwitch.addEventListener("click", () => {
     darkmode = localStorage.getItem('darkmode');
@@ -74,44 +71,23 @@ if (themeSwitch) {
   console.error("themeSwitch element not found.");
 }
 
-// function page3Animation(){
-//   var elemC = document.querySelector("#elem_container")
-//   var fixed = document.querySelector("#fixed_image")
-//   elemC.addEventListener("mouseenter",function(){
-//       fixed.style.display = "block"
-//   })
-//   elemC.addEventListener("mouseleave",function(){
-//       fixed.style.display = "none"
-//   })
-//   var elems = document.querySelectorAll(".elem")
-//   elems.forEach(function(e){
-//       e.addEventListener("mouseenter",function(){
-//           var image = e.getAttribute("data-image")
-//           fixed.style.backgroundImage = `url(${image})`
-//       })
-//   })
-// }
-
 function page3Animation() {
   var elemC = document.querySelector("#elem_container");
   var fixed = document.querySelector("#fixed_image");
 
-  // Show the fixed image on mouseenter
   elemC.addEventListener("mouseenter", function () {
     fixed.style.display = "block";
   });
 
-  // Hide the fixed image on mouseleave
   elemC.addEventListener("mouseleave", function () {
     fixed.style.display = "none";
   });
 
-  // Handle hover over individual elements
   var elems = document.querySelectorAll(".elem");
   elems.forEach(function (e) {
     e.addEventListener("mouseenter", function () {
-      var image = e.getAttribute("data-image"); // Get the relative path to the image
-      fixed.style.backgroundImage = `url(./images/${image})`; // Update to point to your folder
+      var image = e.getAttribute("data-image"); 
+      fixed.style.backgroundImage = `url(./images/${image})`; 
     });
   });
 }
